@@ -3,6 +3,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "node --watch src/index.js"
+		"dev": "node --env-file=../../.env --watch src/index.js"
+	},
+	"dependencies": {
+		"fastify": "^5.8.2"
 	}
 }
