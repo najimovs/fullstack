@@ -16,4 +16,32 @@
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	padding: 2rem;
+}
+
+#products {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+#products li {
+	border: 2pt solid yellow;
+	width: calc((100% - 4rem) / 3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	padding: 1rem;
+	border-radius: 1rem;
+}
+
+#products img {
+	width: 10rem;
+	min-height: 15rem;
+	object-fit: cover;
+	border-radius: 1rem;
 }

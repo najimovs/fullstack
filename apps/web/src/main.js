@@ -1,14 +1,22 @@
 import "./main.css"
 
-const charsUL = document.getElementById( "chars" )
+const API_URL = "http://localhost:3000"
 
-const characters = await ( await fetch( "http://localhost:3000/chars" ) ).json()
+const productUL = document.getElementById( "products" )
 
-for ( const char of characters ) {
+const products = await ( await fetch( "http://localhost:3000/products" ) ).json()
+
+for ( const product of products ) {
 
 	const li = document.createElement( "LI" )
+	const h1 = document.createElement( "H1" )
+	const img = document.createElement( "IMG" )
 
-	li.textContent = char
+	li.appendChild( h1 )
+	li.appendChild( img )
+	productUL.appendChild( li )
 
-	charsUL.appendChild( li )
+	h1.textContent = product.name
+	img.src = API_URL + product.coverIMG
+	img.alt = product.name
 }
